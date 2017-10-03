@@ -3,7 +3,7 @@ var TaskService = require("./taskService");
 
 var TaskServiceWrapper = function () {
 
-    var completeAndNotify = function (task) {
+    var completeAndNotify = function (myTask) {
         TaskService.complete(myTask);
         if (myTask.completed == true) {
             TaskService.setCompleteDate(myTask);
@@ -16,3 +16,4 @@ var TaskServiceWrapper = function () {
     }
 };
 
+module.exports = TaskServiceWrapper();
